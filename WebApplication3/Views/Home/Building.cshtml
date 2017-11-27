@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication3.Models.ViewModels.BuildingViewModel>
+
+@{
+    ViewData["Title"] = "Building";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Building</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuildingName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CollegeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StreetAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollegeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+        
+        </tr>
+}
+    </tbody>
+</table>

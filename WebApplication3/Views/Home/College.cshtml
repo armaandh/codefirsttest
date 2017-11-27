@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApplication3.Models.ViewModels.CollegeViewModel>
+
+@{
+    ViewData["Title"] = "College";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>College</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CollegeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Established)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollegeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Established)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
